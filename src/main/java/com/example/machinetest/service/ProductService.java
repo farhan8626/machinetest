@@ -24,13 +24,15 @@ public class ProductService {
         return productRepo.save(product);
 
     }
-
+//update
     public Product updateProduct(Long id, Product product){
         Product existingProduct = getProductById(id);
         existingProduct.setName(product.getName());
         existingProduct.setPrice(product.getPrice());
         existingProduct.setCategory(product.getCategory());
         return productRepo.save(existingProduct);
+
+
     }
 
     public void deleteProduct(Long id){
